@@ -1,0 +1,119 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <view class="userinfo-avatar-box magictime {{show_type}}">
+        <view class='userinfo-avatar'>
+          <view class='diamond-icon iconfont'></view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
+<view style='height:200px;'></view>
+<view class='magic-box'>
+  Magic Effects
+  <view bindtap='magic' data-type="magic" class="magic-btn">magic</view>
+  <view bindtap='magic' data-type="twisterInDown" class="magic-btn">twisterInDown</view>
+  <view bindtap='magic' data-type="twisterInUp" class="magic-btn">twisterInUp</view>
+  <view bindtap='magic' data-type="swap" class="magic-btn" class="magic-btn">swap</view>
+</view>
+<view class='magic-box'>
+  <view style='margin-top:30px;'>Bling</view>
+  <view bindtap='magic' data-type="puffIn" class="magic-btn">puffIn</view>
+  <view bindtap='magic' data-type="puffOut" class="magic-btn">puffOut</view>
+  <view bindtap='magic' data-type="vanishIn" class="magic-btn">vanishIn</view>
+  <view bindtap='magic' data-type="vanishOut" class="magic-btn" class="magic-btn">vanishOut</view>
+</view>
+<view class='magic-box'>
+  <view style='margin-top:30px;'>Static Effects</view>
+  <view bindtap='magic' data-type="openDownLeft" class="magic-btn">openDownLeft</view>
+  <view bindtap='magic' data-type="openDownRight" class="magic-btn">openDownRight</view>
+  <view bindtap='magic' data-type="openUpLeft" class="magic-btn">openUpLeft</view>
+  <view bindtap='magic' data-type="openUpRight" class="magic-btn" class="magic-btn">openUpRight</view>
+  <view bindtap='magic' data-type="openDownLeftRetourn" class="magic-btn" class="magic-btn">openDownLeftRetourn</view>
+  <view bindtap='magic' data-type="openDownRightRetourn" class="magic-btn" class="magic-btn">openDownRightRetourn</view>
+  <view bindtap='magic' data-type="openUpLeftRetourn" class="magic-btn" class="magic-btn">openUpLeftRetourn</view>
+  <view bindtap='magic' data-type="openUpRightRetourn" class="magic-btn" class="magic-btn">openUpRightRetourn</view>
+  <view bindtap='magic' data-type="openDownLeftOut" class="magic-btn" class="magic-btn">openDownLeftOut</view>
+  <view bindtap='magic' data-type="openDownRightOut" class="magic-btn" class="magic-btn">openDownRightOut</view>
+  <view bindtap='magic' data-type="openUpLeftOut" class="magic-btn" class="magic-btn">openUpLeftOut</view>
+  <view bindtap='magic' data-type="openUpRightOut" class="magic-btn" class="magic-btn">openUpRightOut</view>
+</view>
+<view class='magic-box'>
+  <view style='margin-top:30px;'>Static Effects Out</view>
+  <view bindtap='magic' data-type="openDownLeftOut" class="magic-btn">openDownLeftOut</view>
+  <view bindtap='magic' data-type="openDownRightOut" class="magic-btn">openDownRightOut</view>
+  <view bindtap='magic' data-type="openUpLeftOut" class="magic-btn">openUpLeftOut</view>
+  <view bindtap='magic' data-type="openUpRightOut" class="magic-btn" class="magic-btn">openUpRightOut</view>
+</view>
+<view class='magic-box'>
+  <view style='margin-top:30px;'>Perspective</view>
+  <view bindtap='magic' data-type="perspectiveDown" class="magic-btn">perspectiveDown</view>
+  <view bindtap='magic' data-type="perspectiveUp" class="magic-btn">perspectiveUp</view>
+  <view bindtap='magic' data-type="perspectiveLeft" class="magic-btn">perspectiveLeft</view>
+  <view bindtap='magic' data-type="perspectiveRight" class="magic-btn" class="magic-btn">perspectiveRight</view>
+  <view bindtap='magic' data-type="perspectiveDownRetourn" class="magic-btn" class="magic-btn">perspectiveDownRetourn</view>
+  <view bindtap='magic' data-type="perspectiveUpRetourn" class="magic-btn" class="magic-btn">perspectiveUpRetourn</view>
+  <view bindtap='magic' data-type="perspectiveLeftRetourn" class="magic-btn" class="magic-btn">perspectiveLeftRetourn</view>
+  <view bindtap='magic' data-type="perspectiveRightRetourn" class="magic-btn" class="magic-btn">perspectiveRightRetourn</view>
+</view>
+<view class='magic-box'>
+  <view style='margin-top:30px;'>Rotate</view>
+  <view bindtap='magic' data-type="rotateDown" class="magic-btn" class="magic-btn">rotateDown</view>
+  <view bindtap='magic' data-type="rotateUp" class="magic-btn" class="magic-btn">rotateUp</view>
+  <view bindtap='magic' data-type="rotateLeft" class="magic-btn" class="magic-btn">rotateLeft</view>
+  <view bindtap='magic' data-type="rotateRight" class="magic-btn" class="magic-btn">rotateRight</view>
+</view>
+<view class='magic-box'>
+  <view style='margin-top:30px;'>Slide</view>
+  <view bindtap='magic' data-type="slideDown" class="magic-btn" class="magic-btn">slideDown</view>
+  <view bindtap='magic' data-type="slideUp" class="magic-btn" class="magic-btn">slideUp</view>
+  <view bindtap='magic' data-type="slideLeft" class="magic-btn" class="magic-btn">slideLeft</view>
+  <view bindtap='magic' data-type="slideRight" class="magic-btn" class="magic-btn">slideRight</view>
+  <view bindtap='magic' data-type="slideDownRetourn" class="magic-btn" class="magic-btn">slideDownRetourn</view>
+  <view bindtap='magic' data-type="slideUpRetourn" class="magic-btn" class="magic-btn">slideUpRetourn</view>
+  <view bindtap='magic' data-type="slideLeftRetourn" class="magic-btn" class="magic-btn">slideLeftRetourn</view>
+  <view bindtap='magic' data-type="slideRightRetourn" class="magic-btn" class="magic-btn">slideRightRetourn</view>
+</view>
+<view class='magic-box'>
+  <view style='margin-top:30px;'>Math</view>
+  <view bindtap='magic' data-type="swashOut" class="magic-btn" class="magic-btn">swashOut</view>
+  <view bindtap='magic' data-type="swashIn" class="magic-btn" class="magic-btn">swashIn</view>
+  <view bindtap='magic' data-type="foolishOut" class="magic-btn" class="magic-btn">foolishOut</view>
+  <view bindtap='magic' data-type="foolishIn" class="magic-btn" class="magic-btn">foolishIn</view>
+  <view bindtap='magic' data-type="holeOut" class="magic-btn" class="magic-btn">holeOut</view>
+</view>
+<view class='magic-box'>
+  <view style='margin-top:30px;'>Tin</view>
+  <view bindtap='magic' data-type="tinRightOut" class="magic-btn" class="magic-btn">tinRightOut</view>
+  <view bindtap='magic' data-type="tinLeftOut" class="magic-btn" class="magic-btn">tinLeftOut</view>
+  <view bindtap='magic' data-type="tinUpOut" class="magic-btn" class="magic-btn">tinUpOut</view>
+  <view bindtap='magic' data-type="tinDownOut" class="magic-btn" class="magic-btn">tinDownOut</view>
+  <view bindtap='magic' data-type="tinRightIn" class="magic-btn" class="magic-btn">tinRightIn</view>
+  <view bindtap='magic' data-type="tinLeftIn" class="magic-btn" class="magic-btn">tinLeftIn</view>
+  <view bindtap='magic' data-type="tinUpIn" class="magic-btn" class="magic-btn">tinUpIn</view>
+  <view bindtap='magic' data-type="tinDownIn" class="magic-btn" class="magic-btn">tinDownIn</view>
+</view>
+<view class='magic-box'>
+  <view style='margin-top:30px;'>Bomb</view>
+  <view bindtap='magic' data-type="bombRightOut" class="magic-btn" class="magic-btn">bombRightOut</view>
+  <view bindtap='magic' data-type="bombLeftOut" class="magic-btn" class="magic-btn">bombLeftOut</view>
+</view>
+<view class='magic-box'>
+  <view style='margin-top:30px;'>Boing</view>
+  <view bindtap='magic' data-type="boingInUp" class="magic-btn" class="magic-btn">boingInUp</view>
+  <view bindtap='magic' data-type="boingOutDown" class="magic-btn" class="magic-btn">boingOutDown</view>
+</view>
+<view class='magic-box'>
+  <view style='margin-top:30px;'>On the Space</view>
+  <view bindtap='magic' data-type="spaceOutUp" class="magic-btn" class="magic-btn">spaceOutUp</view>
+  <view bindtap='magic' data-type="spaceOutRight" class="magic-btn" class="magic-btn">spaceOutRight</view>
+  <view bindtap='magic' data-type="spaceOutDown" class="magic-btn" class="magic-btn">spaceOutDown</view>
+  <view bindtap='magic' data-type="spaceOutLeft" class="magic-btn" class="magic-btn">spaceOutLeft</view>
+  <view bindtap='magic' data-type="spaceInUp" class="magic-btn" class="magic-btn">spaceInUp</view>
+  <view bindtap='magic' data-type="spaceInRight" class="magic-btn" class="magic-btn">spaceInRight</view>
+  <view bindtap='magic' data-type="spaceInDown" class="magic-btn" class="magic-btn">spaceInDown</view>
+  <view bindtap='magic' data-type="spaceInLeft" class="magic-btn" class="magic-btn">spaceInLeft</view>
+</view>

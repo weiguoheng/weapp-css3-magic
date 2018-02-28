@@ -1,0 +1,60 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  background:#000;
+  text-align: center;
+  line-height: 64px;
+  width: 64px;
+  height: 64px;
+  border-radius: 5px;
+  position: absolute;
+  top: -2px;
+  left: -2px;
+}
+.userinfo-avatar-box{
+  width: 60px;
+  height: 60px;
+  border: solid 2px #fff;
+  border-radius: 6px;
+  position: relative;
+}
+
+.magic-box{
+  text-align:center;
+  font-size:24px;
+}
+.magic-btn{
+  background:rgba(0, 0, 0, 0.3);
+  border:solid 2px #fff;
+  margin:10px 20px;
+  border-radius:5px;
+  height:40px;
+  line-height:40px;
+  font-size:20px;
+}
+
+@font-face {
+  font-family: 'iconfont';  /* project id 576528 */
+  src: url('//at.alicdn.com/t/font_576528_l0k6vdng8rnklnmi.eot');
+  src: url('//at.alicdn.com/t/font_576528_l0k6vdng8rnklnmi.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_576528_l0k6vdng8rnklnmi.woff') format('woff'),
+  url('//at.alicdn.com/t/font_576528_l0k6vdng8rnklnmi.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_576528_l0k6vdng8rnklnmi.svg#iconfont') format('svg');
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 35px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.diamond-icon:before {
+    content: '\e62e';
+}

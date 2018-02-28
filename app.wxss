@@ -1,0 +1,18 @@
+ @import "magic.wxss"; 
+page{
+  color:#fff;
+  -webkit-font-smoothing: antialiased;
+  font-family: PingFangSC-Regular;
+  -webkit-text-size-adjust: none;
+  background: linear-gradient(to right, #57516f, #ed7470);
+}
+.container {
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100rpx 0;
+  box-sizing: border-box;
+  background:rgba(0, 0, 0, 0.3);
+  position:fixed;
+  width:100%;
+} 
